@@ -1,0 +1,330 @@
+/*
+   VW Gallery Front End Style
+*/
+
+.vw_gallery_front li {
+  list-style: none;
+}
+
+.icon_overlay {
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  -moz-transition: all 0.8s ease 0s;
+  -ms-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.vw_gallery_front li:hover .icon_overlay, .vw_masonry_inner:hover .icon_overlay {
+  opacity: 1;
+}
+
+.vw_gallery_front li:hover .icon_overlay, .vw_masonry_inner:hover .icon_overlay {
+  opacity: 1;
+}
+
+.icon_overlay i {
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+
+.vw_gallery_front img, .vw_masonry_inner img{
+  width: 100%;
+  -webkit-transition: all 0.8s ease 0s;
+  -moz-transition: all 0.8s ease 0s;
+  -ms-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.vw_gi_inner:hover img, .vw_masonry_inner:hover img{
+    transform: scale(1.2);
+}
+
+.vw_gallery_front, .vw_masonry_style {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0 !important;
+  max-width: 100% !important;
+  display: block;
+  float: left;
+}
+
+li.vw_gi_box {
+  width: 25%;
+  float: left;
+  position: relative;
+}
+
+.vw_gi_inner {
+  position: relative;
+  vertical-align: top;
+  margin: 0 !important;
+  height: 100%;
+  overflow: hidden;
+}
+.vw_gi_inner .item{
+  font-size: 0 !important;
+}
+.vw_gallery_styling {
+  width: 100%;
+  display: block;
+  float: left;
+  margin-top: 0 !important;
+  max-width: 100% !important;
+}
+
+.vw_gi_inner{
+  position:relative;
+}
+
+
+/* Masonry Style */
+
+.full .content img {
+  left: 50%;
+  transform: translate3d(0, 0, 0);
+  animation: zoomin 1s ease;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+@-moz-keyframes zoomin {
+  0% {
+    max-width: 50%;
+    transform: rotate(-30deg);
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+    transform: rotate(-80deg);
+  }
+  70% {
+    max-width: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes zoomin {
+  0% {
+    max-width: 50%;
+    transform: rotate(-30deg);
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+    transform: rotate(-80deg);
+  }
+  70% {
+    max-width: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+}
+@-o-keyframes zoomin {
+  0% {
+    max-width: 50%;
+    transform: rotate(-30deg);
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+    transform: rotate(-80deg);
+  }
+  70% {
+    max-width: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+}
+@keyframes zoomin {
+  0% {
+    max-width: 50%;
+    transform: rotate(-30deg);
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+    transform: rotate(-80deg);
+  }
+  70% {
+    max-width: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+}
+
+.vw_masonry_box {
+  margin-bottom: 24px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+
+.vw_masonry_image {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+#macy-container {
+    margin-top: 22px;
+}
+
+/* lightbox Css*/
+
+.vw_light_gallery > ul > li a > img {
+  -webkit-transition: -webkit-transform 1s ease 0s;
+  -moz-transition: -moz-transform 1s ease 0s;
+  -o-transition: -o-transform 1s ease 0s;
+  transition: transform 1s ease 0s;
+  transform: scale(1.4);
+  width: 100%;
+}
+
+.vw_light_gallery > ul > li a:hover > img {
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.vw_light_gallery > ul > li a:hover .vw_light_gallery-poster > img {
+  opacity: 1;
+}
+
+.vw_light_gallery > ul > li a .vw_light_gallery-poster {
+  background-color: rgba(0, 0, 0, 0.1);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: background-color 0.15s ease 0s;
+  -o-transition: background-color 0.15s ease 0s;
+  transition: background-color 0.15s ease 0s;
+}
+
+.vw_light_gallery > ul > li a .vw_light_gallery-poster > img {
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: opacity 0.3s ease 0s;
+  -o-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+}
+
+.vw_light_gallery > ul > li a:hover .vw_light_gallery-poster {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.vw_light_gallery .justified-gallery > a > img {
+  -webkit-transition: -webkit-transform 0.15s ease 0s;
+  -moz-transition: -moz-transform 0.15s ease 0s;
+  -o-transition: -o-transform 0.15s ease 0s;
+  transition: transform 0.15s ease 0s;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  height: 100%;
+  width: 100%;
+}
+
+.vw_light_gallery .justified-gallery > a:hover > img {
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.vw_light_gallery .justified-gallery > a:hover .vw_light_gallery-poster > img {
+  opacity: 1;
+}
+
+.vw_light_gallery .justified-gallery > a .vw_light_gallery-poster {
+  background-color: rgba(0, 0, 0, 0.1);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: background-color 0.15s ease 0s;
+  -o-transition: background-color 0.15s ease 0s;
+  transition: background-color 0.15s ease 0s;
+}
+
+.vw_light_gallery .justified-gallery > a .vw_light_gallery-poster > img {
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: opacity 0.3s ease 0s;
+  -o-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+}
+
+.vw_light_gallery .justified-gallery > a:hover .vw_light_gallery-poster {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.vw_light_gallery .video .vw_light_gallery-poster img {
+  height: 48px;
+  margin-left: -24px;
+  margin-top: -24px;
+  opacity: 0.8;
+  width: 48px;
+}
+
+.vw_light_gallery .dark > ul > li a {
+  border: 3px solid #04070a;
+}
+
+.lg-outer .lg-thumb{
+  margin: 0 auto;
+}
+
+.image_des{
+  color: #fff;
+}
+
+.image_title{
+  font-weight: 900;
+  color: #fff;
+  text-transform: capitalize !important;
+}
+
+.hover_style1 h4,
+.hover_style1 p{
+  display: none;
+  
+}
+
+.hover_style h4,
+.hover_style p{
+  padding-left: 15px;
+  padding-bottom: 0;
+  margin: 0 !important;
+}
