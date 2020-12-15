@@ -165,6 +165,7 @@ li.btn-buynow a {
 
 </head>
 
+<?php if (is_home()): ?>
 <body data-rsssl="1" class="home page-template page-template-page-template page-template-home-page page-template-page-templatehome-page-php page page-id-800 wp-custom-logo theme-vw-fitness-pro woocommerce-js">
     <div class="spinner-loading-box" style="display: none;">
 		<div class="lds-ripple">
@@ -172,6 +173,16 @@ li.btn-buynow a {
 			<div></div>
 		</div>
     </div>
+<? else: ?>
+
+
+<body data-rsssl="1" class="page-template-default page page-id-802 wp-custom-logo theme-vw-fitness-pro woocommerce-js">
+    <div class="spinner-loading-box" style="display: none;">
+    <div class="lds-ripple"><div></div><div></div></div>
+    </div>
+
+
+<?endif;?>   
 	
     <section id="topbar-section">
 		<div class="container topbar-container">  
@@ -208,7 +219,7 @@ li.btn-buynow a {
 		<div class="container">
 			<div class="row">
 				<div class="logo col-md-3 col-sm-4 col-9 wow bounceInDown py-4 m-0" style="visibility: visible; animation-name: bounceInDown;">
-					<a href="index.html" class="custom-logo-link" rel="home" aria-current="page">
+					<a href="/" class="custom-logo-link" rel="home" aria-current="page">
 						<img src="<?php bloginfo('template_url'); ?>/img/logo-5.webp" class="custom-logo" alt="клуб основной инстинкт" width="189" height="48">
 					</a>                  
 				</div>
@@ -225,14 +236,14 @@ li.btn-buynow a {
 									<div class="menu-main-container">
 										<ul id="menu-main" class="primary-menu">
 										<li id="menu-item-850" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-800 current_page_item menu-item-850">
-										<a href="index.html" aria-current="page">ГЛАВНАЯ</a></li>
+										<a href="/" aria-current="page">ГЛАВНАЯ</a></li>
 										<li id="menu-item-848" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-848">
-											<a href="about.html">О НАС</a></li>
+											<a href="/?page_id=23">О НАС</a></li>
 										<li id="menu-item-849" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-849">
-											<a href="blog.html">БЛОГ</a>
+											<a href="/?page_id=26">СТАТЬИ</a>
 										</li>
 										<li id="menu-item-845" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-845">
-											<a href="contact.html">КОНТАКТЫ</a></li>
+											<a href="/?page_id=28">КОНТАКТЫ</a></li>
 										</ul>
 									</div>                  
 								</div>

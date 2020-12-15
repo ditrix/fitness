@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-
+<?php if (is_home()): ?>
 <section id="slider" class="p-0">
 	<div id="carouselExampleIndicators" class="carousel slide  carousel-fade " data-ride="carousel" data-interval="10000">
 		<div class="carousel-inner" role="listbox">
@@ -642,6 +642,25 @@
 		</div>
 	</div>
 </section><!-- Template to show the content of page editor -->
+<?php else:
+	$postid = get_the_ID();
+	switch ($postid) {
+		case '23':
+			$current_template = locate_template('about.php');
+			break;
+		case '26':
+			$current_template = locate_template('statiy.php');
+			break;		
+		case '28':
+			$current_template = locate_template('contact.php');
+			break;			
+		default:
+			$current_template = locate_template('404.php');
+			break;
+	}
+	
+	load_template($current_template);		
 
+ endif;?>
 
 <?php get_footer(); ?>
