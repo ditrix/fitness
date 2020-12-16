@@ -1,6 +1,6 @@
 <?php   /* меню сайта*/ ?>
 <!-- navigation -->
-
+<?php $itemId = get_the_ID(); ?>
 <div class="innermenubox">
 	<div class="menu-box">
 		<div class="headerbar">
@@ -11,16 +11,43 @@
 		<div class="main-header">
 			<div class="side-navigation p-0 mt-4">
 				<div class="menu-main-container">
+
+
+
 					<ul id="menu-main" class="primary-menu">
-					<li id="menu-item-850" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-800 current_page_item menu-item-850">
-					<a href="/" aria-current="page">ГЛАВНАЯ</a></li>
-					<li id="menu-item-848" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-848">
-						<a href="/?page_id=23">О НАС</a></li>
-					<li id="menu-item-849" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-849">
+					
+					<?php if (is_home()): ?>	
+					<li id="menu-item-850" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item  current_page_item">
+					<?php else: ?>
+					<li id="menu-item-850" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item">
+					<?php endif;?>
+						<a href="/" aria-current="page">ГЛАВНАЯ</a>
+					</li>
+
+					<?php if($itemId == '23'):?>
+					<li id="menu-item-848" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item  current_page_item">
+					<?php else:?>
+					<li id="menu-item-848" class="menu-item menu-item-type-post_type menu-item-object-page">
+					<?php endif;?>	
+						<a href="/?page_id=23">О НАС</a>
+					</li>
+
+					<?php if($itemId == '26'):?>
+					<li id="menu-item-849" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item  current_page_item">
+					<?php else:  ?>
+					<li id="menu-item-849" class="menu-item menu-item-type-post_type menu-item-object-page">
+					<?php endif; ?>	
 						<a href="/?page_id=26">СТАТЬИ</a>
 					</li>
-					<li id="menu-item-845" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-845">
-						<a href="/?page_id=28">КОНТАКТЫ</a></li>
+					
+					<?php if($itemId == '28'):?>
+					<li id="menu-item-845" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item  current_page_item">
+					<?php else: ?>
+					<li id="menu-item-845" class="menu-item menu-item-type-post_type menu-item-object-page">
+					<?php endif; ?>	
+						<a href="/?page_id=28">КОНТАКТЫ</a>
+					</li>
+					
 					</ul>
 				</div>                  
 			</div>
