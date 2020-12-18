@@ -94,3 +94,4 @@
 		</div>
 	</div>
 </section><!-- Template to show the content of page editor -->
+

@@ -17,16 +17,16 @@ if (is_home()):
 		case '23':
 			load_template(locate_template('about.php'));
 			break;
-		case '26':
-			load_template(locate_template('statiy.php'));
-			break;		
 		case '28':
 			load_template(locate_template('contact.php'));
 			break;			
-		default:
-			load_template(locate_template('404.php'));
+		case '26':
+			load_template(locate_template('statiy.php'));	
 			break;
+		default:
+			load_template(locate_template('article.php'));				
 	}
+	//echo "$postid ".$postid;
 	
 	//load_template($current_template);		
  endif;

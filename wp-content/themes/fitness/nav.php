@@ -1,6 +1,19 @@
 <?php   /* меню сайта*/ ?>
 <!-- navigation -->
-<?php $itemId = get_the_ID(); ?>
+<?php 
+
+
+
+$itemId = get_the_ID(); 
+	
+	echo $itemId; 
+
+
+//	$catId = get_cat_ID();
+
+//	echo $catId; 
+
+?>
 <div class="innermenubox">
 	<div class="menu-box">
 		<div class="headerbar">
@@ -63,7 +76,7 @@
 						<a href="/?page_id=23">О НАС</a>
 					</li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page">
-						<a href="/?page_id=26">СТАТЬИ</a>
+						<a href="/?page_id=35">СТАТЬИ</a>
 					</li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page">
 						<a href="/?page_id=28">КОНТАКТЫ</a>

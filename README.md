@@ -10,3 +10,7 @@ https://wptp.info/shablon-stranicy-wordpress.html
 
 
 http://fitness/?page_id=23
+
+
+TODO:
+для отслеживания конкретной записи - следим за рубрикой statiy

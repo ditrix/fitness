@@ -131,3 +131,34 @@
 	</div><!-- EOF CONTAINER -->
 </div>
 
+
+
+<!-- спасение:    https://qna.habr.com/q/319387 -->
+
+	<?php 
+
+	global $post;
+	$postslist = get_posts( array( 'posts_per_page' => 2, 'category'=>'blog' ) );
+	//var_dump($postslist);
+
+
+
+foreach ( $postslist as $post ){
+  setup_postdata($post);
+  ?>
+  <div>
+  	<?php the_date(); /* выводит дату новости    */ ?>  
+    <?php the_title();  /*выводит заголовок новости*/ ?>  
+    <?php the_excerpt();   /*- выводит краткое описание*/ ?> 
+    <?php the_post_thumbnail();   /*- выводит превью новости - картинку */  ?> 
+    <a href="<?php echo the_permalink() ?>">далее...</a>
+ 			<?php 
+
+
+ 			?>
+     </div>
+     <hr />
+  <?php
+
+	}
+	wp_reset_postdata();  ?>
