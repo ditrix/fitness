@@ -22,18 +22,7 @@ setup_postdata($current_post);
 				</div>
 				<hr>
 				<?php the_content(); ?>
-				<p>Te obtinuit ut adepto satis somno. Aliisque institoribus 
-				iter deliciae vivet vita. Nam exempli gratia, quotiens ego vadam ad 
-				diversorum peregrinorum in mane ut effingo ex contractus
-				</p>
-				<p>Te obtinuit ut adepto satis somno. Aliisque institoribus 
-				iter deliciae vivet vita. Nam exempli gratia, quotiens ego vadam ad 
-				diversorum peregrinorum in mane ut effingo ex contractus
-				</p>
-				<p>Te obtinuit ut adepto satis somno. Aliisque institoribus 
-				iter deliciae vivet vita. Nam exempli gratia, quotiens ego vadam ad 
-				diversorum peregrinorum in mane ut effingo ex contractus
-				</p>
+	
 				<div class="row">
 					<div class="col-lg-7 col-md-4 col-sm-12 col-12">
 						<p class="font-weight-bold"></p>
@@ -66,33 +55,25 @@ setup_postdata($current_post);
 			<aside id="recent-posts-2" class="widget widget_recent_entries">
 				<h3 class="widget-title">Последние статьи</h3>
 				<ul>
-					<li><a href="article.html?no=1">лучшие упражнения для для тела</a></li>
-					<li><a href="article.html?no=2">польза тренировок</a></li>
-					<li><a href="article.html?no=3">как правильно питаться</a></li>
+				<?php 
+					global $aside_post;
+					 global $cnt_aside_post;
+					 $cnt_saside_post = 0;
+					$postslist = get_posts( array( 'posts_per_page' => 5, 'category'=>'blog' ) );
+					foreach ( $postslist as $post ):
+  						setup_postdata($post);
+					?>		
+						<li><a href="<?php echo the_permalink(); ?>"><?php the_title();?></a></li>
+				<?php 
+
+					endforeach;
+				?>
 				</ul>
-			</aside>
-			<aside id="meta-2" class="widget widget_meta"><h3 class="widget-title">Метки</h3>
-				<ul>
-					<li><a href="#">Кардио</a></li>
-					<li><a href="#">Бег</a></li>
-					<li><a href="#">Прочее</a></li>
-				</ul>
-			</aside>	        
+
+
+			</aside>	
 		</div>
 		<div class="clearfix"></div>
 	</div>
 </div>
 
-<!-- спасение  https://wp-kama.ru/function/get_post  -->
-
-<?php
-
-
-
-
-
-//echo $title; 
-//print_r($post);
-
-
-?>
