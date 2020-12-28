@@ -5,7 +5,7 @@ if (is_home()):
 	load_template(locate_template('home/section_slider.php'));		
 	load_template(locate_template('home/section_services.php'));
 	load_template(locate_template('home/section_about.php'));
-	load_template(locate_template('home/section_gallery.php'));
+	//load_template(locate_template('home/section_gallery.php'));
 	load_template(locate_template('/home/section_instructors.php'));
 	load_template(locate_template('/home/section_price.php'));
 	load_template(locate_template('/home/section_reviews.php'));	

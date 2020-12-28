@@ -97,6 +97,10 @@ html body,#header .side-navigation ul li a,.topbar a,h1,h2,h3,h4,h5,h6,#slider .
 <link rel="stylesheet" id="normalize-css" href="<?php bloginfo('template_url'); ?>/css/normalize.css" type="text/css" media="all">
 <link rel="stylesheet" id="vw-fitness-pro-bootstrap-style-css" href="<?php bloginfo('template_url'); ?>/css/bootstrap.css" type="text/css" media="all">
 <link rel="stylesheet" id="style_fitness-style-css" href="<?php bloginfo('template_url'); ?>/css/style_fitness.css" type="text/css" media="all">
+
+<link rel="stylesheet" id="style_fitness-style-css" href="<?php bloginfo('template_url'); ?>/css/fitness_theme.css" type="text/css" media="all">
+
+
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery_003.js" id="jquery-core-js"></script>
 
 <script type="text/javascript" defer="defer" src="<?php bloginfo('template_url'); ?>/js/pld-frontend.js" id="pld-frontend-js"></script>

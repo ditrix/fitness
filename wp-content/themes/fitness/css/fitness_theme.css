@@ -1,0 +1,10 @@
+
+footer a {
+	color: red;
+	text-decoration: none !important;
+}
+
+footer a:focus, a:hover {
+    text-decoration: none !important;
+    color: var(--yellow);
+}

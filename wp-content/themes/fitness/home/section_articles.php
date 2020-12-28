@@ -6,90 +6,40 @@
     	<div class="container">
 			<h2 class="pricing_brd">Статьи</h2>
 			<div class="row">
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<div class="postbox">
-						<div class="postpic">
-				      		<img src="<?php bloginfo('template_url'); ?>/img/blog/blog1.webp" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" width="600" height="400">
-							<ul class="posticon-1">
-								<li class="date_div p-1 mb-1">
-									<span class="entry-date price pull-right">8 Sep</span>
-								</li>
-				      			<li class="comment_div">
-									<span class="entry-comment price pull-right">0<i class="fa fa-comments ml-1"></i></span>
-								</li>
-							</ul>
-				      	</div>
+
+
+				
+    <?php   $home_postslist = get_posts( array( 'posts_per_page' => 3, 'category'=>'blog' ) );
+        foreach ( $home_postslist as $home_post ): ?>
+        	<?php setup_postdata($home_post); ?>    
+			<div class="col-lg-4 col-md-4 col-sm-6">
+				<div class="postbox">
+						
+					<div class="postpic">
+						<div  class="attachment-post-thumbnail size-post-thumbnail wp-post-image">
+								<?php echo get_the_post_thumbnail( $home_post->ID) ?>
+						</div>
 						<div class="postbox-content">
-							<h4 class="posttitle"><a href="">ЛУЧШИЕ УПРАЖНЕНИЯ</a></h4>
-				      		<ul class="meta_listing">
-				          		<li class="auther mr-3"><i class="fa fa-user"></i>D@veloper</li>
-				          	</ul>
+							<h4 class="posttitle"><a href="<?php echo $home_post->guid; ?>"><?php echo $home_post->post_title;?></a></h4>
+				      		
 				       		<div class="posttext mt-3">
-								Te obtinuit ut adepto satis somno. Aliisque institoribus iter deliciae vivet vita. Nam exempli
-								 gratia, quotiens ego vadam ad diversorum peregrinorum in mane ut 
-								effingo ex contractus
+								<?php echo $home_post->post_excerpt; ?>
+							</div>
+							<div>
 							</div>
 					        <div class="read_more">
-								<a class="theme_orange_button py-2 px-3 mt-3" href="article.html?no=1">Подробнее...</a>
+								<a class="theme_orange_button py-2 px-3 mt-3" href="<?php echo $home_post->guid; ?>">Подробнее...</a>
 							</div>						      
 					    </div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<div class="postbox">
-					    <div class="postpic">
-							<img src="<?php bloginfo('template_url'); ?>/img/blog/blog2.webp" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" width="600" height="400">
-							<ul class="posticon-1">
-								<li class="date_div p-1 mb-1">
-									<span class="entry-date price pull-right">8 Sep</span>
-								</li>
-					      		<li class="comment_div">
-									<span class="entry-comment price pull-right">0<i class="fa fa-comments ml-1"></i></span>
-								</li>
-					        </ul>
-					    </div>
-					    <div class="postbox-content">
-							<h4 class="posttitle"><a href="news.html">ЛУЧШИЕ КАРДИО УПРАЖНЕНИЯ</a></h4>
-					      	<ul class="meta_listing">
-					        	<li class="auther mr-3"><i class="fa fa-user"></i>D@veloper</li>
-					        </ul>
-					       	<div class="posttext mt-3">Te obtinuit ut adepto satis somno. 
-								Aliisque institoribus iter deliciae vivet vita. Nam exempli gratia, 
-								quotiens ego vadam ad diversorum peregrinorum in mane ut effingo ex contractus
-							</div>
-							<div class="read_more">
-								<a class="theme_orange_button py-2 px-3 mt-3" href="article.html?no=2">Подробнее...</a>
-							</div>
-					    </div>
-					  </div>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<div class="postbox">
-						<div class="postpic">
-					    	<img src="<?php bloginfo('template_url'); ?>/img/blog/blog3.webp" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" width="600" height="400">
-							<ul class="posticon-1">
-								<li class="date_div p-1 mb-1">
-									<span class="entry-date price pull-right">8 Sep</span>
-								</li>
-					    		<li class="comment_div">
-									<span class="entry-comment price pull-right">0<i class="fa fa-comments ml-1"></i></span>
-								</li>
-							</ul>
-						</div>
-						<div class="postbox-content">
-							<h4 class="posttitle"><a href="news.html">ЛУЧШИЕ УПРАЖНЕНИЯ ДЛЯ ТЕЛА</a></h4>
-					    	<ul class="meta_listing">
-					      		<li class="auther mr-3"><i class="fa fa-user"></i>D@veloper</li>
-					      	</ul>
-					    	<div class="posttext mt-3">Te obtinuit ut adepto satis somno. 
-								  Aliisque institoribus iter deliciae vivet vita. Nam exempli 
-								  gratia, quotiens ego vadam ad diversorum peregrinorum in mane ut 
-								  effingo ex contractus
-							</div>
-							<div class="read_more"><a class="theme_orange_button py-2 px-3 mt-3" href="article.html?no=3">Подробнее...</a></div>						      
-						</div>
-					</div>
-				</div>
+				 	</div>
+				 </div>
+
+			</div>
+
+    <?php endforeach; ?>
+                   
+
+
 			</div>
 		</div>
 	</div>

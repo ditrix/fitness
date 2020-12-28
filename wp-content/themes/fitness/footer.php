@@ -22,12 +22,13 @@
         <div class="row">
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
             <aside id="recent-posts-5" class="widget widget_recent_entries">
-              <h3 class="widget-title">ПОПУЛЯРНЫЕ СТАТЬИ</h3>
+              <h3 class="widget-title">ПОСЛЕДНИЕ СТАТЬИ</h3>
               <ul>
-                <li><a href="article.html?no=1">лучшие упражнения для для тела</a></li>
-                <li><a href="article.html?no=2">польза тренировок</a></li>
-                <li><a href="article.html?no=3">как правильно питаться</a></li>
-              </ul>
+        <?php   $footer_postslist = get_posts( array( 'posts_per_page' => 3, 'category'=>'blog' ) );
+            foreach ( $footer_postslist as $footer_post ): ?>    
+                  <li><a href="<?php echo $footer_post->guid; ?>"><?=$footer_post->post_title; ?></a></li>
+        <?php endforeach; ?>
+              </ul>                
             </aside>        
           </div>
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">

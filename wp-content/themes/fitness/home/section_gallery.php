@@ -19,7 +19,8 @@
 						</li>
 						<li class="vw_gi_box">
 							<div class="vw_gi_inner">
-								<a class="item" href="img/home/services2.jpeg" rel="prettyPhoto[gallery_name]" title="services2"><img src="<?php bloginfo('template_url'); ?>/img/home/services2.jpeg" class="attachment-vw-gallery-image-medium size-vw-gallery-image-medium" alt="" loading="lazy" width="294" height="299">
+								<a class="item" href="<?php bloginfo('template_url'); ?>/img/home/services2.jpeg" rel="prettyPhoto[gallery_name]" title="services2">
+										<img src="<?php bloginfo('template_url'); ?>/img/home/services2.jpeg" class="attachment-vw-gallery-image-medium size-vw-gallery-image-medium" alt="" loading="lazy" width="294" height="299">
 									<div class="icon_overlay">
 										<i class="fa fa-plus"></i>
 									</div>
