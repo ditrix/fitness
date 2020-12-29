@@ -24,10 +24,17 @@
             <aside id="recent-posts-5" class="widget widget_recent_entries">
               <h3 class="widget-title">ПОСЛЕДНИЕ СТАТЬИ</h3>
               <ul>
-        <?php   $footer_postslist = get_posts( array( 'posts_per_page' => 3, 'category'=>'blog' ) );
-            foreach ( $footer_postslist as $footer_post ): ?>    
-                  <li><a href="<?php echo $footer_post->guid; ?>"><?=$footer_post->post_title; ?></a></li>
-        <?php endforeach; ?>
+        <?php   $footer_postslist = get_posts( array( 'posts_per_page' => getMaxQueryReacords(), 'category'=>'blog' ) ); $cnt = 0;
+            foreach ( $footer_postslist as $footer_post ): ?>   
+        <?php 
+              if(isArticle($footer_post)):  ?>
+              <li><a href="<?php echo $footer_post->guid; ?>"><?=$footer_post->post_title; ?></a></li>
+        <?php endif;
+              $cnt++;
+              if($cnt > getArticlesPerHome()){
+                 break;
+              }
+         endforeach; ?>
               </ul>                
             </aside>        
           </div>

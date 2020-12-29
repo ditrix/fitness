@@ -9,9 +9,10 @@
 
 	<?php 
 			global $post;
-			$postslist = get_posts( array( 'posts_per_page' => 5, 'category'=>'blog' ) );
+			$postslist = get_posts( array( 'posts_per_page' => getMaxQueryReacords(), 'category'=>'blog' ) );
 			foreach ( $postslist as $post ):
   				setup_postdata($post);
+  				if(isArticle($post)):
   	?>
   			<div class="col-lg-6 col-md-6 col-sm-12">
 				<div class="postbox">
@@ -37,7 +38,10 @@
 				</div>
 			</div>		
 
-	<?php   endforeach; 
+	<?php
+			
+			endif;	   
+		endforeach; 
 			wp_reset_postdata(); 
 	?>
 

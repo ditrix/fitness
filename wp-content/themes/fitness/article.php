@@ -56,16 +56,14 @@ setup_postdata($current_post);
 				<h3 class="widget-title">Последние статьи</h3>
 				<ul>
 				<?php 
-					global $aside_post;
-					 global $cnt_aside_post;
-					 $cnt_saside_post = 0;
-					$postslist = get_posts( array( 'posts_per_page' => 5, 'category'=>'blog' ) );
+					$postslist = get_posts( array( 'posts_per_page' => getMaxQueryReacords(), 'category'=>'blog' ) );
 					foreach ( $postslist as $post ):
+						if(isArticle($post)):
   						setup_postdata($post);
-					?>		
+				?>		
 						<li><a href="<?php echo the_permalink(); ?>"><?php the_title();?></a></li>
 				<?php 
-
+						endif;	
 					endforeach;
 				?>
 				</ul>
