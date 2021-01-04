@@ -6,7 +6,7 @@
 
 $itemId = get_the_ID(); 
 	
-	echo $itemId; 
+	//echo $itemId; 
 
 
 //	$catId = get_cat_ID();

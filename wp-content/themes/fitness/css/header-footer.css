@@ -6,6 +6,8 @@
   --darkblue:#18304c;
   --skyblue:#3890cb;
   --gray1:#aaaaaa;
+  --red: #ff1a07;
+
 }
 /*---------------------------Top Bar------------------------- */
 .topbar,#topbar-section,#header .header-top{
@@ -151,7 +153,7 @@ span.search-icon i{
   transition: 0.2s all linear;
 }
 .side-navigation ul li a:hover {
-  color: var(--yellow);
+  color: var(--red);
   text-decoration: underline
 }
 .side-navigation ul li.current_page_item a:after,.side-navigation ul li a:after{
@@ -245,7 +247,7 @@ span.search-icon i{
   transition: background .3s;
 }
 .side-navigation ul li ul li:hover > a{
-  color:var(--yellow);
+  color:var(--red);
 }
 .side-navigation ul ul > li.menu-item-has-children > a:before{
     position: absolute;
@@ -299,7 +301,7 @@ span.search-icon i{
   text-transform:uppercase; 
   font-size:24px;
   margin:0 0 24px 0; 
-  border-bottom:1px solid var(--yellow); 
+  border-bottom: 1px solid var(--red) !important; 
   padding:0 0 17px 0;
   font-weight: bold;
 }
@@ -331,7 +333,7 @@ span.search-icon i{
   margin:0;
 }
 #footer .copyright{
-  border-top:1px solid var(--yellow);
+  border-top:1px solid var(--red) !important;
 }
 #footer ul li{
   list-style: none;
@@ -352,11 +354,11 @@ span.search-icon i{
 }
 /*------------------ Social Media Box -----------------*/
 .social-box{
-  background:var(--yellow) !important;
+  background:var(--red) !important;
   padding:19px 0;
 }
 .social-box .social-heading{
-  color: var(--darkblue);
+  color: var(--white) !important;
   font-size: 36px;
   line-height: 24px;
   margin-top: 13px;
