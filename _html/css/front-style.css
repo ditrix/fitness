@@ -1,0 +1,22 @@
+/*--Front Style*/
+.title-box h1{
+	text-shadow: none;
+}
+.title-box .above_title {
+    position: absolute;
+    top: 50%;
+ 	left: 50%;
+ 	transform: translate(-50%, -50%);
+    margin-top: 0;
+}
+.shortcode{
+	padding: 50px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.title-box-full-width{
+	width: 100vw;
+	margin-left: calc(-50vw + 50% - 8px);
+	position: relative;
+}

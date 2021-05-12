@@ -1,0 +1,376 @@
+:root {
+  --white: #ffffff;
+  --offwhite: #cccccc;
+  --black: #000000;
+  --yellow:#d3da36;
+  --darkblue:#18304c;
+  --skyblue:#3890cb;
+  --gray1:#aaaaaa;
+}
+/*---------------------------Top Bar------------------------- */
+.topbar,#topbar-section,#header .header-top{
+  background-color: var(--black);
+}
+#topbar-section span,.topbar a,.topbar i,#header .logo a,#header .logo p,.close-sidebar,.headerbar,.side-navigation a,#footer,.container #blog-right-sidebar h3,#footer h3,#content-vw #footer h3,#footer .copyright a,#footer ul li a,.social-box .social-media a{
+  color: var(--white);
+}
+.topbar-socialbox .hi_normal,#header,.home.blog #header {
+  border-right: 1px solid var(--white);
+}
+.topbar-socialbox,#header .logo,#header .logo h1,#header .social-media,#footer,#footer .copyright p,#footer .copyright a,#footer .copyright,.social-box{
+  text-align: center;
+}
+.side-navigation,.side-navigation ul,.social-box .social-heading,.side-navigation ul ul li,.search #header .nav,.container #blog-right-sidebar h3,#footer h3,#content-vw #footer h3,#footer ul li{
+  text-align: left;
+}
+.close-sidebar,.headerbar{
+  text-align: right
+}
+.headerbar,amp-sidebar#sidebar1,.side-navigation ul ul,#sticky-onoff,.footer_hide {
+  display: none
+}
+.side-navigation li,.social-box .social-media a {
+  display: inline-block;
+}
+.side-navigation a,.side-navigation ul ul li,.side-navigation ul li:hover>ul{
+  display: block;
+}
+.home .topbar,.home #header,.side-navigation ul ul{
+  position: absolute;
+}
+#header,.home.blog #header,.side-navigation li{
+  position: relative;
+}
+#topbar-section span {
+  font-size: 14px;
+}
+.home .topbar {
+  top: 7px;
+  z-index: 999;
+  background-color: unset;
+  left: 0;
+  right: 0;
+}
+.topbar i,.topbar-socialbox span{
+  font-size: 16px;
+}
+.topbar-socialbox span {
+  line-height: 24px;
+  font-weight: bold;
+}
+span.search-icon i{
+  margin-top: 29px;
+  color: var(--yellow);
+}
+.input-group .form-control,.input-group input.search-field{
+  width: 100%;
+}
+.close-search i{
+  color:white;
+  font-size:18px;
+  cursor:pointer;
+}
+/* --------------------------HEADER---------------------------- */
+#header {
+  width: 100% !important;
+  top: 0em;
+  opacity: 1; 
+}
+#header .logo a{ 
+  font-weight:700; 
+  text-transform:uppercase; 
+  padding:0; 
+  margin-bottom:8px; 
+  font-size:20px; 
+  margin-top: 0; 
+}
+#header .logo p{ 
+  font-size:12px;
+}
+.home #header{
+  max-width:80%; 
+  border:none;
+  margin:0 auto;
+  top: 4em;
+  left: 9%;
+  right: 9%;
+  opacity: 0.9;
+}
+#header,.home.blog #header{
+  z-index:999; 
+  width:100%; 
+  height:auto;
+  background: var(--darkblue);
+}
+#header .header-top,#header .header-top a{
+  color:var(--gray1);
+}
+#header .top-contact{
+  font-size:15px;
+}
+#header .social-media a:hover{
+  color:var(--skyblue);
+}
+#header .search-form{
+  display: none;
+}
+/*----------------Menu bar-----------*/
+.side-navigation>li {
+  list-style: none;
+  margin-bottom: 10px
+}
+.close-sidebar {
+  font-size: 35px;
+}
+.headerbar {
+  font-size: 30px;
+  font-weight:900;
+}
+.i-amphtml-sidebar-mask {
+  position: static!important
+}
+.side-navigation ul {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.side-navigation li {
+  margin: 0;
+  padding: 5px 6px;
+}
+.side-navigation a {
+  text-decoration: none;
+  outline-offset: -8px;
+  padding: 10px 10px 10px 10px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 700;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+}
+.side-navigation ul li a:hover {
+  color: var(--yellow);
+  text-decoration: underline
+}
+.side-navigation ul li.current_page_item a:after,.side-navigation ul li a:after{
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  border-radius: 0;
+  width: 25px;
+  height: 3px;
+  transition: all .4s ease;
+  margin-bottom: 21px;
+  background-color: var(--white);
+}
+.side-navigation ul li.current_page_item a:after{
+  visibility: visible;
+  opacity: 1;
+  margin-bottom: 10px;
+}
+.side-navigation ul > li.menu-item-has-children > a:before{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-size: 12px;
+    vertical-align: middle;
+    font-weight: 900;
+    transform: translateY(-50%);
+}
+.side-navigation ul > li:hover > a:after {
+    margin-bottom: 10px;
+    visibility: visible;
+    opacity: 1;
+}
+.side-navigation ul li a:after{
+  visibility: hidden;
+  opacity: 0;
+}
+.side-navigation ul li ul, .side-navigation ul li ul.sub-menu {
+    display: block;
+    position: absolute;
+    z-index: 555;
+    top: calc(100% + 15px);
+    min-width: 280px;
+    white-space: nowrap;
+    margin-top: 0;
+    border: unset;
+    border-radius: 0;
+    padding: 12px 0;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in;
+}
+.side-navigation ul li:hover > ul, .side-navigation ul li:hover > ul.sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: rotateX(0) translateZ(0);
+    top: 100%;
+}
+.side-navigation ul ul {
+  left: 0;
+  top: 100%;
+  background: var(--black);
+  min-width: 215px;
+  z-index: 9999;
+}
+.side-navigation ul ul ul {
+  left: 15%;
+  top: -3px;
+}
+.side-navigation ul li ul li:hover ul {
+  top: -12px;
+}
+.side-navigation ul ul a {
+  padding: 10px 10px 10px 25px;
+  transition: color 0.3s, opacity 0.3s;
+}
+.side-navigation ul ul li {
+  float: none;
+  border-left: none;
+  border-right: none!important;
+  padding: 0
+}
+.side-navigation ul ul a {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.side-navigation ul ul li {
+  transition: background .3s;
+}
+.side-navigation ul li ul li:hover > a{
+  color:var(--yellow);
+}
+.side-navigation ul ul > li.menu-item-has-children > a:before{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-size: 12px;
+    vertical-align: middle;
+    font-weight: 900;
+    transform: translateY(-50%);
+}
+.side-navigation ul li ul li > a:after {
+  display: block;
+  content: '';
+  height: 2px;
+  width: 25%;
+  position: absolute;
+  bottom: -4px;
+  margin-bottom: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .4s ease;
+  background-color: var(--yellow);
+}
+.sticky {
+  position: fixed !important;
+  top: 0px !important;
+  width: 100% !important;
+  padding-bottom: 0 !important;
+  left: 0 !important;
+  z-index: 99 !important;
+  right: 0 !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  max-width: 100% !important;
+}
+.stickynavbar {
+  padding-top: 0 !important;
+}
+.search #header .nav {
+  margin: 0% 0 0 0;
+  padding: 0;
+  float: right;
+} 
+/*---------------- Footer Section ----------------------*/
+#footer{
+  background:var(--darkblue); 
+}
+.container #blog-right-sidebar h3,#footer h3,#content-vw #footer h3{
+  text-transform:uppercase; 
+  font-size:24px;
+  margin:0 0 24px 0; 
+  border-bottom:1px solid var(--yellow); 
+  padding:0 0 17px 0;
+  font-weight: bold;
+}
+#footer .copyright p,#footer .copyright a{
+  font-size:15px;
+  color:var(--white) !important;
+}
+#footer .copyright a {
+  cursor: pointer;
+}
+#footer .news-form{
+  margin-top:24px;
+}
+.footer_email {
+  padding-left: 0px;
+  margin-top: 10px;
+}
+#footer input[type="text"]{
+  padding:8px 5%; 
+  float:left;
+  margin-right:2%;
+  border-radius:5px;
+}
+#footer input[type="submit"]{
+  padding:10px 5%;
+  float:left; 
+  border:none; 
+  border-radius:0px; 
+  margin:0;
+}
+#footer .copyright{
+  border-top:1px solid var(--yellow);
+}
+#footer ul li{
+  list-style: none;
+  width: 100%;
+  margin: 0 0 5px 0;
+  font-size: 16px;
+  line-height: 40px;
+}
+#footer p{
+  font-size: 15px;
+  line-height: 24px;
+}
+.myfooter ul,ol{
+  margin: 0px;
+}
+.myfooter select{
+  margin-left: 0px;
+}
+/*------------------ Social Media Box -----------------*/
+.social-box{
+  background:var(--yellow) !important;
+  padding:19px 0;
+}
+.social-box .social-heading{
+  color: var(--darkblue);
+  font-size: 36px;
+  line-height: 24px;
+  margin-top: 13px;
+  font-weight: bold;
+}
+.social-box .social-media{
+  padding-top:6px;
+}
+.social-box .social-media a {
+  background: var(--yellow);
+  padding: 8px 12px;
+  margin-bottom: 4px;
+  margin-right: 1%;
+  width: 43px;
+  border-radius: 50%;
+  font-size: 19px;
+}
